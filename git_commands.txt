@@ -105,7 +105,7 @@ git show --stat HEAD
 
 STEP 5: GITHUB INTEGRATION
 --------------------------
-git remote add origin https://github.com/<username>/git-workflow-assignment.git
+git remote add origin https://github.com/u7k4rs6/git-workflow-assignment.git
     Connects the local repository to the empty public GitHub repository and names
     that remote "origin".
 
@@ -119,6 +119,14 @@ git push -u origin main
 git push origin feature
     Uploads the feature branch too, so the branch is also visible on GitHub.
 
+git branch -a
+    Lists local branches and the remote-tracking branches (remotes/origin/main and
+    remotes/origin/feature), confirming both branches exist on GitHub.
+
+git status
+    Confirms the local main branch is up to date with origin/main and the working
+    tree is clean after pushing.
+
 git log --oneline --graph --all
     Final check of the complete history, including the remote-tracking branches.
 
@@ -129,3 +137,11 @@ git add git_commands.txt
 
 git commit -m "Add git_commands.txt documenting all Git commands used"
     Commits the documentation file to the repository.
+
+git push
+    Uploads the new commit(s) on main to GitHub (the upstream was set earlier with -u).
+
+git add git_commands.txt
+git commit -m "Update git_commands.txt: real repository URL and missing Step 5 commands"
+    Commits a correction to this file (actual GitHub URL instead of a placeholder,
+    and the git branch -a / git status commands used in Step 5).
